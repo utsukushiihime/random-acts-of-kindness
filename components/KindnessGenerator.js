@@ -5,8 +5,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  width: 100vw; 
   padding: 20px;
-  background-color: #f5f5f5;
+  background: url('/random-kindness.jpeg') no-repeat center center fixed; 
+  background-size: cover;
 `;
 
 const Button = styled.button`
@@ -14,14 +18,14 @@ const Button = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #800080; 
+  background-color: #ff0000; // Red color for Christmas
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    background-color: #4B0082; 
+    background-color: #008000; // Green color when hovered
     transform: scale(1.05); 
   }
 `;
@@ -40,10 +44,18 @@ const fadeIn = keyframes`
 `;
 
 const RandomActText = styled.p`
-  font-size: 24px; // Increase the font size
-  text-align: center; // Center the text
-  color: #800080; // Make the text purple
-  animation: ${fadeIn} 2s ease-in; // Apply the fade-in animation over 2 seconds
+  font-size: 24px;
+  text-align: center;
+  color: #008000; 
+  animation: ${fadeIn} 2s ease-in;
+  background-color: rgba(255, 255, 255, 0.7); 
+  padding: 10px;
+  border-radius: 5px;
+`;
+
+const Title = styled.h2`
+  font-family: 'Courier New', Courier, monospace;
+  color: #ff0000; // Red color for Christmas
 `;
 
 
@@ -62,7 +74,7 @@ const KindnessGenerator = ({ actsOfKindness }) => {
 
 	return (
 		<Container>
-			<h2>Random Act of Kindness:</h2>
+			<Title>Random Act of Kindness:</Title>
 			{ randomAct && <RandomActText key={ randomAct }>{ randomAct }</RandomActText> }
 			<ButtonContainer>
 				<Button onClick={ getRandomAct }>Get Random Act</Button>
