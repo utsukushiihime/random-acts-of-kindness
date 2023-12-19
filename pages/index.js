@@ -9,17 +9,16 @@ const Title = styled.h1`
   text-align: center;
 `;
 
+
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>Random Acts of Kindness Generator</title>
         <meta name="description" content="Generate random acts of kindness for the holiday season" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <Title>Random Acts of Kindness Generator</Title>
         <KindnessGenerator actsOfKindness={ actsOfKindness } />
 
       </main>

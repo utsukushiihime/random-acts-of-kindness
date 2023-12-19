@@ -1,15 +1,27 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import Lottie from 'lottie-react';
+import animationData from '../animations/animation-holidays.json'; // adjust the path as needed
+
 
 const Container = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center; 
   height: 100vh;
   width: 100vw; 
-  background: url('/random-kindness.jpeg') no-repeat center center fixed; 
-  background-size: cover;
+  overflow: hidden;
+`;
+
+const BackgroundAnimation = styled(Lottie)`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 `;
 
 const Button = styled.button`
@@ -59,7 +71,6 @@ const Title = styled.h2`
 `;
 
 
-
 const KindnessGenerator = ({ actsOfKindness }) => {
 	const [randomAct, setRandomAct] = useState('');
 
@@ -74,6 +85,7 @@ const KindnessGenerator = ({ actsOfKindness }) => {
 
 	return (
 		<Container>
+			<BackgroundAnimation animationData={ animationData } autoplay loop />
 			<Title>Random Act of Kindness:</Title>
 			{ randomAct && <RandomActText key={ randomAct }>{ randomAct }</RandomActText> }
 			<ButtonContainer>
