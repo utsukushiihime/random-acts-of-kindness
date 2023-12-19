@@ -4,7 +4,7 @@ import KindnessGenerator from '../components/KindnessGenerator';
 import { actsOfKindness } from '../actsOfKindness';
 
 const Title = styled.h1`
-  color: palevioletred;
+  color: red;
   font-size: 24px;
   text-align: center;
 `;

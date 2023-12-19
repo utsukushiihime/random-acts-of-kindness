@@ -5,10 +5,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh; 
+  justify-content: center; 
+  height: 100vh;
   width: 100vw; 
-  padding: 20px;
   background: url('/random-kindness.jpeg') no-repeat center center fixed; 
   background-size: cover;
 `;
@@ -18,14 +17,14 @@ const Button = styled.button`
   padding: 10px 20px;
   font-size: 16px;
   color: white;
-  background-color: #ff0000; // Red color for Christmas
+  background-color: #ff0000; 
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 
   &:hover {
-    background-color: #008000; // Green color when hovered
+    background-color: #008000;
     transform: scale(1.05); 
   }
 `;
@@ -44,12 +43,13 @@ const fadeIn = keyframes`
 `;
 
 const RandomActText = styled.p`
-  font-size: 24px;
+  font-size: 32px;
+	font-weight: bold;
   text-align: center;
   color: #008000; 
   animation: ${fadeIn} 2s ease-in;
   background-color: rgba(255, 255, 255, 0.7); 
-  padding: 10px;
+  padding: 20px;
   border-radius: 5px;
 `;
 
